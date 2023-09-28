@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Main Page</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="mb-3">
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon3">URL</span>
+                <input type="text" class="form-control" id="url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon3">Version (1 - 40)</span>
+                <input type="number" class="form-control" id="version" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="error">Error Correction</label>
+            <select class="form-select" id="error">
+                <option selected>Choose...</option>
+                <option value="0">M (lowest)</option>
+                <option value="1">L</option>
+                <option value="3">Q</option>
+                <option value="2">H (highest)</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon3">Box Size</span>
+                <input type="number" class="form-control" id="box_size" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon3">Border</span>
+                <input type="number" class="form-control" id="border" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-text">
+                <input class="form-check-input mt-0" type="checkbox" value="" id="file_check"
+                    aria-label="Checkbox for following text input">
+            </div>
+            <label class="input-group-text" for="logo_file">Logo</label>
+            <input type="file" class="form-control" id="logo_file">
+        </div>
+
+        <button class="btn btn-primary" id="submit">Create</button>
+
+        <div class="text-center">
+            <img src="" id="image" class="rounded" alt="Your QR Code" style="max-width: 400px; max-height: 400px;">
+        </div>
+        <br>
+        <div class="btn-group" role="group" aria-label="Options">
+            <button id="check" type="button" class="btn btn-secondary">Check functionality</button>
+            <button id="down_png" type="button" class="btn btn-secondary">Download PNG</button>
+            <button id="down_svg" type="button" class="btn btn-secondary">Download SVG</button>
+        </div>
+        <p id="result"><i class="far fa-question-circle"></i> QR Code not checked yet.</p>
+    </div>
+    <script src="static/jsQR.js"></script>
+    <script src="static/freeQR.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
